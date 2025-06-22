@@ -1,0 +1,136 @@
+[
+    {
+        "numero": "000",
+        "titulo": "000 - AQUILO QUE FUI NÃO SOU MAIS ()",
+        "cifra": "C          G\nAquilo que fui não sou mais\nAm         F\nJesus transformou meu viver\nC          G\nEle me deu nova canção\nAm        F      G\nE paz que o mundo não pode dar"
+    },
+    {
+        "numero": "001",
+        "titulo": "O SANGUE DE JESUS TEM PODER",
+        "cifra": "G               D\nO sangue de Jesus tem poder\nEm              C\nPara limpar, purificar\nG               D\nO sangue de Jesus tem poder\nEm              C    D\nPara salvar e libertar"
+    },
+    {
+        "numero": "C002",
+        "titulo": "FUI LAVADO NO SANGUE DO CORDEIRO",
+        "tom": "E",
+        "partes": [
+            {
+                "nome": "Introdução",
+                "acordes": [
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "E"
+                ],
+                "letra": "",
+                "ordem": 1,
+                "tipo": "instrumental"
+            },
+            {
+                "nome": "Coro",
+                "acordes": [
+                    "E",
+                    "B",
+                    "E",
+                    "B",
+                    "E"
+                ],
+                "letra": "Fui lavado no sangue do Cordeiro\nAleluia, glória e aleluia!\nAgora estou aqui\nE vou louvar meu Salvador\nAleluia, glória a Deus!",
+                "ordem": 2,
+                "repete": true
+            },
+            {
+                "nome": "Final",
+                "acordes": [
+                    "A",
+                    "B",
+                    "E"
+                ],
+                "letra": "A Jesus, honra e louvor\nAleluia ao meu Salvador!",
+                "ordem": 3
+            },
+            {
+                "nome": "Instrumental Final",
+                "acordes": [
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "E"
+                ],
+                "letra": "",
+                "ordem": 4,
+                "tipo": ""
+            }
+        ],
+        "observacoes": "CIAS"
+    },
+    {
+        "numero": "C001",
+        "titulo": "FUI LAVADO NO SANGUE DO CORDEIRO",
+        "partes": [
+            {
+                "nome": "Introdução",
+                "acordes": [
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "E"
+                ],
+                "letra": "",
+                "ordem": 1,
+                "tipo": "instrumental"
+            },
+            {
+                "nome": "Coro",
+                "acordes": [
+                    "E",
+                    "B",
+                    "E",
+                    "B",
+                    "E"
+                ],
+                "letraPos": "0Fui la1vado no sangue do Cor2deiro,\nAleluia, glória e ale3luia!\nAgora estou aqui\nE vou louvar meu Salva4dor,\nAleluia, glória a 5Deus!",
+                "letra": "Fui lavado no sangue do Cordeiro,\nAleluia, glória e aleluia!\nAgora estou aqui\nE vou louvar meu Salvador,\nAleluia, glória a Deus!",
+                "ordem": 2,
+                "tipo": "verso",
+                "repete": true
+            },
+            {
+                "nome": "Final",
+                "acordes": [
+                    "E",
+                    "B",
+                    "E"
+                ],
+                "letraPos": "0A Jesus, honra e louvor,\nAle1luia ao meu Salva2dor!",
+                "letra": "A Jesus, honra e louvor,\nAleluia ao meu Salvador!",
+                "ordem": 3,
+                "tipo": "verso"
+            },
+            {
+                "nome": "Instrumentos",
+                "acordes": [
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "A",
+                    "B",
+                    "E"
+                ],
+                "letra": "",
+                "ordem": 4,
+                "tipo": "instrumental"
+            }
+        ]
+    }
+]

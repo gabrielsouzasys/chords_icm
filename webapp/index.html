@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coletânea</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+
+<body>
+  <!-- Esquerda -->
+  <div class="containerL" id="left">
+    <h2>Lista da Direita</h2>
+    <button id="clearRight">Limpar Selecionados</button>
+    <ul id="rightList" class="droppable"></ul>
+    <hr>
+    <input type="text" id="search" placeholder="Pesquisar...">
+    <ul id="leftList"></ul>
+  </div>
+
+  <!-- Direita -->
+
+  <div class="container " id="right">
+    <!-- <h4 class="">Exibir Cifra</h4> -->
+    <div class="cifra-toolbar">
+      <button class="tool-btn" title="Transpor +1" onclick="transpor(1)">♯+</button>
+      <button class="tool-btn" title="Transpor -1" onclick="transpor(-1)">♭-</button>
+      <button class="tool-btn" title="Aumentar fonte" onclick="ajustarFonte(1)">A+</button>
+      <button class="tool-btn" title="Diminuir fonte" onclick="ajustarFonte(-1)">A-</button>
+      <button class="tool-btn" title="Modo Notas" onclick="alternarNotas()">♪♫</button>
+      <button class="tool-btn" title="Imprimir" onclick="imprimirCifra()">🖨️</button>
+      <button class="tool-btn" title="Metrônomo" onclick="abrirMetronomo()">⌛</button>
+    </div>
+
+
+    <div id="cifraDisplay" class="droppable2">
+      <p>Selecione uma música para exibir a cifra</p>
+    </div>
+    <!-- <button id="clearRight">Limpar Selecionados</button> -->
+    <!-- <ul id="" class="droppable2"></ul> -->
+    <!-- <div id="rightList"></div> -->
+  </div>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/toolbar.js"></script>
+</body>
+
+</html>
