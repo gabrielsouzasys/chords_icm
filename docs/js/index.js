@@ -172,7 +172,7 @@ function loadCifras () {
 
 // **************************************
 function showCifra (item) {
-  debugger
+  debugger;
   const codigo = item.match (/^[a-zA-Z\d]+/)[0];
   const cifra = allCifras.find (c => c.numero === codigo);
 
@@ -296,7 +296,6 @@ function renderLeftList (filter = '') {
 
 // ➕ Função para adicionar na direita
 function addToRight (item) {
-
   if (!rightItems.includes (item)) {
     rightItems.push (item);
     const my_li = document.createElement ('li');
@@ -314,20 +313,21 @@ function addToRight (item) {
     const btn2 = document.createElement ('button');
     btn2.textContent = '❌';
     btn2.className = 'rmvBtn';
-    btn2.addEventListener ('click', () => removeFromRight (item, my_li));
-    
+    btn2.onclick = () => removeFromRight (item, my_li);
+    //  'removeFromRight (item, my_li)';
+    // btn2.addEventListener ('click', () => removeFromRight (item, my_li));
+
     my_div.appendChild (btn2);
 
     const btn3 = document.createElement ('button');
     btn3.textContent = '🎶'; //!🎵
     btn3.className = 'cfrBtn';
-    btn3.addEventListener ('click', () => showCifra (item));
-    
-    
+    btn3.onclick = () => showCifra (item);
+    // btn3.addEventListener ('click', () => showCifra (item));
+
     my_div.appendChild (btn3);
     my_li.appendChild (my_span);
     my_li.appendChild (my_div);
-
 
     // Adiciona classe de animação
     my_li.classList.add ('item-added');
