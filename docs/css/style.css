@@ -6,8 +6,8 @@ body {
 }
 
 .containerL {
-    padding: 15px;
-    width: 22em;
+    padding: 5px;
+    width: 25.5em;
     border: 1px solid #ccc;
     overflow-y: auto;
     box-sizing: border-box;
