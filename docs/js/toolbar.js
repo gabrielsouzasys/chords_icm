@@ -86,28 +86,36 @@ function imprimirCifra () {
 }
 
 // Metrônomo básico
+function CloseMetronomo () {
+  const modal = document.querySelector ('.modal-metronomo_show');
+  if (modal) {
+    modal.className = 'modal-metronomo_hide';
+    // modal.style.display = 'none';
+  }
+}
+
 function abrirMetronomo () {
   const modal = document.createElement ('div');
-  modal.className = 'modal-metronomo';
+  modal.id = 'my_modal';
+  modal.className = 'modal-metronomo_show';
   modal.innerHTML = `
     <h3>Metrônomo</h3>
     <div>
       <label>BPM: <input type="number" id="bpm" value="120" min="40" max="300"></label>
       <button onclick="iniciarMetronomo()">▶️ Iniciar</button>
       <button onclick="pararMetronomo()">⏹️ Parar</button>
+      <button onclick="CloseMetronomo()">❌ Fechar</button>
     </div>
     <div id="metronomo-display">♪</div>
   `;
   document.body.appendChild (modal);
-  modal.style.display = 'block';
-
-  // Fechar ao clicar fora
-  modal.addEventListener ('click', e => {
-    if (e.target === modal) modal.remove ();
-  });
+  // modal.style.display = 'block';
 }
 
+
+
 let metronomoInterval;
+
 function iniciarMetronomo () {
   const bpm = document.getElementById ('bpm').value;
   const display = document.getElementById ('metronomo-display');
@@ -116,7 +124,7 @@ function iniciarMetronomo () {
   metronomoInterval = setInterval (() => {
     display.textContent = display.textContent === '♪' ? '♫' : '♪';
     // Aqui você pode adicionar um som de tick
-    new Audio ('data:audio/wav;base64,UklGRl...').play ().catch (e => {});
+    // new Audio (${sound}).play ().catch (e => {});
   }, 60000 / bpm);
 }
 
