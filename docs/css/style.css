@@ -33,10 +33,18 @@ body {
 }
 
 #search {
-    width: 100%;
+    /* width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box; */
+
+
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.7em;
+    margin-bottom: 1em;
+    font-size: medium;
+    box-sizing: border-box
 }
 
 #clearRight {
@@ -51,11 +59,7 @@ body {
     font-size: 14px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+
 
 li {
     display: flex;
@@ -154,11 +158,27 @@ button.cfrBtn {
 /* font-size: 12px;
 } */
 
-.droppable {
+.droppable_selected_list {
     min-height: 100px;
     border: 2px dashed #aaa;
     padding: 10px;
     margin-bottom: 15px;
+}
+
+ul.droppable_selected_list:empty::before {
+    content: "Nenhum item selecionado";
+    color: rgb(236, 30, 30);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    align-content: end;
+}
+
+ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .droppable2 {
