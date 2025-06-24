@@ -6,16 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coletânea</title>
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"> -->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-... (pode usar sem integrity também)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
-
-
 <body>
-  <!-- Esquerda -->
+
+
+
+
+
+  <!-- Coluna Principal -->
   <div class="containerL" id="left">
 
     <!-- <h2>Lista da Direita</h2> -->
     <button id="clearRight">Limpar Selecionados</button>
+
+
+
+    <!-- <button class="bg-blue-500 text-white px-20 py-5 rounded hover:bg-blue-700">
+      Clique Aqui tail
+    </button>
+    <button class="btn btn-primary">Clique Aqui boots</button>
+    <button class="button is-primary">Clique Aqui bulma</button>
+    <a class="waves-effect waves-light btn">Clique Aqui Materialize</a> -->
 
     <ul id="rightList" class="droppable_selected_list"></ul>
     <hr>
@@ -28,13 +50,63 @@
   <div class="container " id="right">
     <!-- <h4 class="">Exibir Cifra</h4> -->
     <div class="cifra-toolbar">
-      <button class="tool-btn" title="Transpor +1" onclick="transpor(1)">♯+</button>
-      <button class="tool-btn" title="Transpor -1" onclick="transpor(-1)">♭-</button>
-      <button class="tool-btn" title="Aumentar fonte" onclick="ajustarFonte(1)">A+</button>
-      <button class="tool-btn" title="Diminuir fonte" onclick="ajustarFonte(-1)">A-</button>
-      <button class="tool-btn" title="Modo Notas" onclick="alternarNotas()">♪♫</button>
+
+    <button class="tool-btn" title="" onclick="prev()">
+        <span style="font-size: 14px;"></span> <i style="font-size: 14px; color: purple" class="fas fa-arrow-left"></i>
+      </button>
+
+      <button class="tool-btn" title="" onclick="next()">
+        <span style="font-size: 18px; ;"></span> <i style="font-size: 14px; color: purple;" class="fas fa-arrow-right" ></i>
+      </button>
+
+
+
+
+      <!-- <button class="tool-btn" title="Transpor +1" onclick="transpor(1)">♯+</button> -->
+      <button class="tool-btn" title="Transpor +1" onclick="transpor(1)">
+        <span style="font-size: 14px;">#</span> <i style="font-size: 14px;" class="fas fa-arrow-up"></i>
+      </button>
+
+      <button class="tool-btn" title="Transpor -1" onclick="transpor(-1)">
+        <span style="font-size: 18px;">♭</span> <i style="font-size: 14px;" class="fas fa-arrow-down"></i>
+      </button>
+
+      <!-- <button class="tool-btn" title="Transpor -1" onclick="transpor(-1)">♭-</button> -->
+
+      <!-- <button class="tool-btn" title="Aumentar fonte" onclick="ajustarFonte(1)">A+</button>
+      <button class="tool-btn" title="Diminuir fonte" onclick="ajustarFonte(-1)">A-</button> -->
+
+      <button class="tool-btn" title="Aumentar fonte" onclick="ajustarFonte(1)">
+        <span style="font-size: 14px;">A</span><i style="font-size: 12px;" class="fas fa-plus"></i>
+      </button>
+      <button class="tool-btn" title="Diminuir fonte" onclick="ajustarFonte(-1)">
+        <span style="font-size: 14px;">A</span><i style="font-size: 12px;" class="fas fa-minus"></i>
+      </button>
+
+
+
+      <!-- <button class="tool-btn" title="Modo Notas" onclick="alternarNotas()">
+    <i class="fas fa-music"></i>
+  </button>
+  <button class="tool-btn" title="Imprimir" onclick="imprimirCifra()">
+    <i class="fas fa-print"></i>
+  </button>
+  <button class="tool-btn" title="Metrônomo" onclick="abrirMetronomo()">
+    <i class="fas fa-stopwatch"></i>
+  </button> -->
+
+
+      <!-- <button class="tool-btn" title="Modo Notas" onclick="alternarNotas()">♪♫</button> -->
       <button class="tool-btn" title="Imprimir" onclick="imprimirCifra()">🖨️</button>
-      <button class="tool-btn" title="Metrônomo" onclick="abrirMetronomo()">⌛</button>
+      <!-- <button class="tool-btn" title="Metrônomo" onclick="abrirMetronomo()">⌛</button> -->
+
+      <button class="tool-btn" title="Print" onclick="tirarPrintDaTag('#rightList', 'lista_musica.png')">
+        <i style="font-size: 14px; font-weight: lighter; color: rgb(6, 87, 173);" class="fas fa-image"></i>
+      </button>
+
+
+
+
     </div>
 
 
@@ -48,6 +120,11 @@
 
   <script src="./js/index.js"></script>
   <script src="./js/toolbar.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+
+
 </body>
 
 </html>
