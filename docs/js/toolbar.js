@@ -82,7 +82,7 @@ function imprimirCifra () {
     </html>
   `);
   janela.document.close ();
-  setTimeout (() => janela.print (), 300);
+  setTimeout (() => janela.print (), 1000);
 }
 
 // Metrônomo básico
@@ -112,8 +112,6 @@ function abrirMetronomo () {
   // modal.style.display = 'block';
 }
 
-
-
 let metronomoInterval;
 
 function iniciarMetronomo () {
@@ -130,4 +128,53 @@ function iniciarMetronomo () {
 
 function pararMetronomo () {
   clearInterval (metronomoInterval);
+}
+
+function tirarPrintDaTag (seletorDaTag, nomeDoArquivo = 'print.png') {
+  debugger;
+  const elemento = document.querySelector (seletorDaTag);
+
+  if (!elemento) {
+    console.error ('Elemento não encontrado!');
+    return;
+  }
+
+  // html2canvas(elemento, {scale: 2, logging: false, useCors: true}).then(canvas => {
+  //   // Cria um link para download da imagem
+  //   const link = document.createElement('a');
+  //   link.download = nomeDoArquivo;
+  //   link.href = canvas.toDataURL('image/png');
+  //   link.click();
+
+  // 1. Clona o elemento para não modificar o original
+  const clone = elemento.cloneNode (true);
+
+  // 2. Remove todos os botões do clone
+  const botoes = clone.querySelectorAll ('.rmvBtn, .cfrBtn, .selectedBtn');
+  botoes.forEach (botao => botao.remove ());
+
+  // (Opcional) Ajusta estilos temporários no clone
+  clone.style.padding = '10px'; // Exemplo: ajuste de espaçamento
+  clone.style.backgroundColor = 'white'; // Fundo branco
+
+  // 3. Adiciona o clone ao body temporariamente (fora da tela)
+  clone.style.position = 'absolute';
+  clone.style.left = '-9999px';
+  document.body.appendChild (clone);
+
+  // 4. Captura o print do clone (sem os botões)
+  html2canvas (clone, {
+    scale: 2, // Melhora a qualidade
+    logging: false, // Desativa logs
+    useCORS: true, // Permite imagens externas (se houver)
+  }).then (canvas => {
+    // Cria o link para download
+    const link = document.createElement ('a');
+    link.download = nomeDoArquivo;
+    link.href = canvas.toDataURL ('image/png');
+    link.click ();
+
+    // Remove o clone do DOM após o download
+    document.body.removeChild (clone);
+  });
 }

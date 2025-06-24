@@ -7,7 +7,7 @@ body {
 
 .containerL {
     padding: 5px;
-    width: 30.7em;
+    width: auto;
     border: 1px solid #ccc;
     overflow-y: auto;
     box-sizing: border-box;
@@ -89,29 +89,6 @@ li {
     font-weight: bold;
 }
 
-
-/* 
-.selectedList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-
-
-    padding: 8px;
-    margin: 2.5px 0 0 0;
-    background: #f0f0f0;
-    border: 1px solid #ddd;
-
-    font-size: 11px;
-    color: rebeccapurple;
-    font-weight: bold;
-
-
-
-} */
-
-
 .selectedText {
     flex: 1;
     /* faz o texto ocupar todo o espaço disponível */
@@ -161,7 +138,7 @@ button.cfrBtn {
 .droppable_selected_list {
     min-height: 100px;
     border: 2px dashed #aaa;
-    padding: 10px;
+    padding: 2px;
     margin-bottom: 15px;
 }
 

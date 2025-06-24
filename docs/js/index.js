@@ -333,9 +333,6 @@ function addToRight (item) {
     my_li.classList.add ('item-added');
     setTimeout (() => my_li.classList.remove ('item-added'), 500);
 
-    //    // Adiciona event listener para duplo clique (remover item)
-    //     li.addEventListener('dblclick', () => removeFromRight(item, li));
-
     // Evento diferente para mobile/desktop
     if (isMobileDevice ()) {
       let pressTimer;
@@ -352,7 +349,7 @@ function addToRight (item) {
         clearTimeout (pressTimer);
       });
     } else {
-      my_li.addEventListener ('dblclick', () => removeFromRight (item, my_li));
+      // my_li.addEventListener ('dblclick', () => removeFromRight (item, my_li));
     }
 
     rightList.appendChild (my_li);
